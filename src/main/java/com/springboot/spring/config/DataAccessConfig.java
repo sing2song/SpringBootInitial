@@ -11,7 +11,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.springboot.spring.data")
+@MapperScan(basePackages = "com.springboot.spring.repository")
 public class DataAccessConfig {
 
     @Bean(name = "factory")
