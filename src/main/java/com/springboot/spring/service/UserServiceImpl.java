@@ -14,8 +14,15 @@ public class UserServiceImpl implements UserService {
     private UserRep rep;
 
     @Override
-    public User print() {
-        User list = rep.getUser();
-        return list;
+    public List<User> print() {
+        List<User> user = rep.getUser();
+        if(user != null)
+            return user;
+        return null;
     }
+//    @Override
+//    public User print() {
+//        User list = rep.getUser();
+//        return list;
+//    }
 }

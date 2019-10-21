@@ -8,16 +8,10 @@
 </head>
 <body>
 Å×½ºÆ®<hr/>
-<c:if test="${userList}">
-    list is null<br/><br/>
-</c:if>
-<c:if test="${!userList}">
-    list is not null<br/><br/>
-</c:if>
-num: ${user.num}<br/>
-id: ${user.userId}<br/>
-pwd: ${user.userPwd}<br/>
-    <c:forEach items="${userList}" var="user">
+<%--num: ${user.num}<br/>--%>
+<%--id: ${user.userId}<br/>--%>
+<%--pwd: ${user.userPwd}<br/>--%>
+  <c:forEach items="${userList}" var="user">
         num: ${user.num}<br/>
         id: ${user.userId}<br/>
         pwd: ${user.userPwd}<br/>

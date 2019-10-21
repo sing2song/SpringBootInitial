@@ -21,8 +21,8 @@ public class HomeController {
     public ModelAndView list() {
         ModelAndView view = new ModelAndView();
         view.setViewName("list");
-        User user = userService.print();
-        view.addObject("user", user);
+        List<User> userList = userService.print();
+        view.addObject("user", userList);
         return view;
     }
 
