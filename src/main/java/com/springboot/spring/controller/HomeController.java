@@ -3,13 +3,14 @@ package com.springboot.spring.controller;
 import com.springboot.spring.data.User;
 import com.springboot.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class HomeController {
 
     @Autowired
@@ -18,12 +19,15 @@ public class HomeController {
 
     @RequestMapping("/test")
     public String list(Model model) {
-        List<User> user =  userService.print();
-        model.addAttribute("list", user);
+        List<User> user = userService.print();
+        System.out.println("user size: " + user.size());
+        model.addAttribute("userList", user);
         return "list";
     }
+
     @RequestMapping("/")
-    public String test() {
-        return "Hello Test";
+    public ModelAndView test() {
+        return new ModelAndView("index");
+//        return "index";
     }
 }
