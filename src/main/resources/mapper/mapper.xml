@@ -4,7 +4,7 @@
 
 <mapper namespace="com.springboot.spring.repository.UserRep">
     <select id="getUser" resultType="com.springboot.spring.data.User">
-        select * from userdata;
+        select * from userdata where num = 1;
     </select>
     <!--<select id="selectCalendar" resultType="com.springboot.spring.data.Calendar">-->
         <!--select * from calendar;-->

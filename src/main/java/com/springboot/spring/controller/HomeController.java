@@ -18,11 +18,12 @@ public class HomeController {
 //    private CalendarService calendarService;
 
     @RequestMapping("/test")
-    public String list(Model model) {
-        List<User> user = userService.print();
-        System.out.println("user size: " + user.size());
-        model.addAttribute("userList", user);
-        return "list";
+    public ModelAndView list() {
+        ModelAndView view = new ModelAndView();
+        view.setViewName("list");
+        User user = userService.print();
+        view.addObject("user", user);
+        return view;
     }
 
     @RequestMapping("/")

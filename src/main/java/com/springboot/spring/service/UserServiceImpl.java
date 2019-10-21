@@ -14,14 +14,8 @@ public class UserServiceImpl implements UserService {
     private UserRep rep;
 
     @Override
-    public List<User> print() {
-        List<User> list = rep.getUser();
-        System.out.println("size: "+list.size());
-        if(list.size() == 0)
-            System.out.println("list is empty");
-        else {
-            System.out.println("list is not empty");
-        }
+    public User print() {
+        User list = rep.getUser();
         return list;
     }
 }
