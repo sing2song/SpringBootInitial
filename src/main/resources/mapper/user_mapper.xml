@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springboot.spring.repository.UserRep">
+    <!--<select id="getUser" resultType="com.springboot.spring.data.User">-->
+        <!--select num, userId, userPwd from userdata where num = 1;-->
+    <!--</select>-->
+    <select id="getUser" resultType="hashmap">
+        select * from userdata;
+    </select>
+</mapper>
