@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.-1 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -8,9 +8,9 @@
 </head>
 <body>
 Å×½ºÆ®<hr/>
-<%--num: ${user.num}<br/>--%>
-<%--id: ${user.userId}<br/>--%>
-<%--pwd: ${user.userPwd}<br/>--%>
+<%--num: ${userList.num}<br/>--%>
+<%--id: ${userList.userId}<br/>--%>
+<%--pwd: ${userList.userPwd}<br/>--%>
   <c:forEach items="${userList}" var="user">
         num: ${user.num}<br/>
         id: ${user.userId}<br/>

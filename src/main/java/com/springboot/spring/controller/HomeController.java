@@ -22,13 +22,13 @@ public class HomeController {
         ModelAndView view = new ModelAndView();
         view.setViewName("list");
         List<User> userList = userService.print();
-        view.addObject("user", userList);
+//        User userList = userService.print();
+        view.addObject("userList", userList);
         return view;
     }
 
     @RequestMapping("/")
     public ModelAndView test() {
         return new ModelAndView("index");
-//        return "index";
     }
 }
