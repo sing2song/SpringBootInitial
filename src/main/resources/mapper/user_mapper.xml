@@ -9,7 +9,4 @@
     <select id="getUser" resultType="hashmap">
         select * from userdata;
     </select>
-    <!--<select id="selectCalendar" resultType="com.springboot.spring.data.Calendar">-->
-        <!--select * from calendar;-->
-    <!--</select>-->
 </mapper>
